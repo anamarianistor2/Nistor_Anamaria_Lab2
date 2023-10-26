@@ -19,5 +19,7 @@ namespace Nistor_Anamaria_Lab2.Data
         public DbSet<Nistor_Anamaria_Lab2.Models.Publisher>? Publisher { get; set; }
 
         public DbSet<Nistor_Anamaria_Lab2.Models.Author>? Authors { get; set; }
+
+        public DbSet<Nistor_Anamaria_Lab2.Models.Category>? Category { get; set; }
     }
 }
