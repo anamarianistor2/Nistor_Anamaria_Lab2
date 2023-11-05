@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Nistor_Anamaria_Lab2.Data;
 using Nistor_Anamaria_Lab2.Models;
+using Nistor_Anamaria_Lab2.Models.ViewModels;
 
 namespace Nistor_Anamaria_Lab2.Pages.Categories
 {
@@ -23,7 +24,7 @@ namespace Nistor_Anamaria_Lab2.Pages.Categories
 
         public async Task OnGetAsync()
         {
-            if (_context.Category != null)
+            if (_context.Authors != null)
             {
                 Category = await _context.Category.ToListAsync();
             }
