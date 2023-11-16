@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -11,6 +12,8 @@ using Nistor_Anamaria_Lab2.Models;
 
 namespace Nistor_Anamaria_Lab2.Pages.Books
 {
+    
+ [Authorize(Roles = "Admin")]
     public class EditModel : BookCategoriesPageModel
     {
         private readonly Nistor_Anamaria_Lab2.Data.Nistor_Anamaria_Lab2Context _context;

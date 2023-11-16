@@ -7,12 +7,16 @@ namespace Nistor_Anamaria_Lab2.Models
     public class Book
     {
         public int ID { get; set; }
+        [Range(3, 150)]
 
         [Display(Name = "Book Title")]
         public string Title { get; set; }
-       
+
+
 
         [Column(TypeName = "decimal(6, 2)")]
+        [Range(0.01, 500)]
+
         public decimal Price { get; set; }
         [DataType(DataType.Date)]
         public DateTime PublishingDate { get; set; }
